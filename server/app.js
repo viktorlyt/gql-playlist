@@ -10,11 +10,14 @@ const app = express();
 app.use(cors());
 
 //connect to DB
-mongoose.connect(
-  "mongodb+srv://viktorlyt:cdt23nbr23@qql-playlist.yp74s7f.mongodb.net/?retryWrites=true&w=majority"
-);
-
-mongoose.connection.once("open", () => console.log("connected to DB"));
+try {
+  mongoose.connect(
+    "mongodb+srv://viktorlyt:cdt23nbr23@qql-playlist.yp74s7f.mongodb.net/?retryWrites=true&w=majority"
+  );
+  mongoose.connection.once("open", () => console.log("connected to DB"));
+} catch (error) {
+  console.log(error);
+}
 
 app.use(
   "/graphql",
