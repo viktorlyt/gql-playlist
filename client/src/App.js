@@ -4,7 +4,7 @@ import { ApolloProvider, InMemoryCache, ApolloClient } from "@apollo/client";
 
 //Apollo clien setup
 const client = new ApolloClient({
-  uri: "https://gql-playlist.onrender.com/graphql",
+  uri: "http://localhost:4000/graphql",
   cache: new InMemoryCache(),
 });
 
