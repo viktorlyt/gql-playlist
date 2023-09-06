@@ -15,6 +15,7 @@ try {
     "mongodb+srv://viktorlyt:cdt23nbr23@qql-playlist.yp74s7f.mongodb.net/?retryWrites=true&w=majority"
   );
   mongoose.connection.once("open", () => console.log("connected to DB"));
+  app.listen(4000, () => console.log("server on port 4000 is running"));
 } catch (error) {
   console.log(error);
 }
@@ -26,5 +27,3 @@ app.use(
     graphiql: true,
   })
 );
-
-app.listen(4000, () => console.log("server on port 4000 is running"));
