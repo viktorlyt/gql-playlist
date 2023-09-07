@@ -18,7 +18,9 @@ mongoose
   )
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
+
 app.listen(4000, () => console.log("server on port 4000 is running"));
+
 app.use(
   "/graphql",
   createHandler({
